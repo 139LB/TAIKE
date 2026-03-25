@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双院体系 - 泰山科技学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "宋体", serif;
+        }
+
+        body {
+            background: url("https://picsum.photos/id/1076/1920/1080") no-repeat center center fixed;
+            background-size: cover;
+            background-color: #fdf6e9;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .overlay {
+            background: rgba(255, 250, 240, 0.85);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 42px;
+            color: #8b4513;
+            margin-bottom: 40px;
+            letter-spacing: 5px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #8b4513;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid #d2b48c;
+        }
+
+        .back-btn:hover {
+            background: #a0522d;
+            transform: translateY(-3px);
+        }
+
+        .intro-section {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #8b4513;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 8px;
+            height: 28px;
+            background: #8b4513;
+            display: inline-block;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: #3d2b1f;
+            text-indent: 2em;
+            margin-bottom: 15px;
+        }
+
+        .college-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .college-card {
+            background: #f9f0e0;
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .college-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.2);
+        }
+
+        .college-card h3 {
+            font-size: 22px;
+            color: #8b4513;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 10px;
+        }
+
+        .college-card p {
+            font-size: 15px;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .college-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .college-card li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .college-card li::before {
+            content: "•";
+            color: #8b4513;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #d2b48c;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+
+            .college-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+
+            <h1 class="page-title">双院体系</h1>
+
+            <div class="intro-section">
+                <h2 class="section-title">体系概述</h2>
+                <p class="intro-text">泰山科技学院是华东地区唯一全员书院制大学，实行"学院+书院"双院协同育人模式。学校设有十座书院，每座书院都有独特的文化定位和育人特色，为学生提供多元化的成长路径。在这里，没有标准答案，只有适合你的道路。</p>
+            </div>
+
+            <div class="college-grid">
+                <div class="college-card">
+                    <h3>九河书院</h3>
+                    <p>九河书院以"河海不择细流，故能就其深"为理念，培养学生的包容精神和宽广胸怀。书院注重跨文化交流，鼓励学生拥抱多元文化。</p>
+                    <ul>
+                        <li>跨文化交流活动</li>
+                        <li>国际视野培养</li>
+                        <li>多元文化体验</li>
+                        <li>包容性教育</li>
+                    </ul>
+                </div>
+
+                <div class="college-card">
+                    <h3>汶阳书院</h3>
+                    <p>汶阳书院以"汶水汤汤，君子自强"为精神，培养学生的自强不息精神和坚韧品格。书院注重体育精神和意志品质的培养。</p>
+                    <ul>
+                        <li>体育竞技活动</li>
+                        <li>意志品质训练</li>
+                        <li>团队协作培养</li>
+                        <li>挑战自我项目</li>
+                    </ul>
+                </div>
+
+                <div class="college-card">
+                    <h3>东岳书院</h3>
+                    <p>东岳书院以"登高望远，胸怀天下"为追求，培养学生的家国情怀和责任担当。书院注重社会实践和志愿服务。</p>
+                    <ul>
+                        <li>社会实践活动</li>
+                        <li>志愿服务项目</li>
+                        <li>公益慈善活动</li>
+                        <li>责任担当教育</li>
+                    </ul>
+                </div>
+
+                <div class="college-card">
+                    <h3>海右书院</h3>
+                    <p>海右书院以"海纳百川，有容乃大"为胸怀，培养学生的创新思维和开放心态。书院注重创新创业和创意实践。</p>
+                    <ul>
+                        <li>创新创业活动</li>
+                        <li>创意实践项目</li>
+                        <li>科技竞赛参与</li>
+                        <li>开放思维培养</li>
+                    </ul>
+                </div>
+
+                <div class="college-card">
+                    <h3>瞻岩书院</h3>
+                    <p>瞻岩书院以"高山仰止，景行行止"为境界，培养学生的道德修养和人文素养。书院注重传统文化和人文精神。</p>
+                    <ul>
+                        <li>传统文化传承</li>
+                        <li>人文素养提升</li>
+                        <li>经典诵读活动</li>
+                        <li>道德品质培养</li>
+                    </ul>
+                </div>
+
+                <div class="college-card">
+                    <h3>五汶书院</h3>
+                    <p>五汶书院以"五汶汇流，百川归海"为愿景，培养学生的协作精神和团队意识。书院注重集体生活和互助成长。</p>
+                    <ul>
+                        <li>集体生活体验</li>
+                        <li>团队协作训练</li>
+                        <li>互助成长项目</li>
+                        <li>集体荣誉建设</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>泰山科技学院 版权所有 © 2026</p>
+                <p>地址：山东省泰安市岱岳区山口镇学院路1号 | 联系电话：0538-8390000</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

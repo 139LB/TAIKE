@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>师资团队 - 泰山科技学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "宋体", serif;
+        }
+
+        body {
+            background: url("https://picsum.photos/id/1076/1920/1080") no-repeat center center fixed;
+            background-size: cover;
+            background-color: #fdf6e9;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .overlay {
+            background: rgba(255, 250, 240, 0.85);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 42px;
+            color: #8b4513;
+            margin-bottom: 40px;
+            letter-spacing: 5px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #8b4513;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid #d2b48c;
+        }
+
+        .back-btn:hover {
+            background: #a0522d;
+            transform: translateY(-3px);
+        }
+
+        .intro-section {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #8b4513;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 8px;
+            height: 28px;
+            background: #8b4513;
+            display: inline-block;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: #3d2b1f;
+            text-indent: 2em;
+            margin-bottom: 15px;
+        }
+
+        .teacher-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .teacher-card {
+            background: #f9f0e0;
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.2);
+        }
+
+        .teacher-card h3 {
+            font-size: 22px;
+            color: #8b4513;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 10px;
+        }
+
+        .teacher-card p {
+            font-size: 15px;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .teacher-card .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #d2b48c;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item .number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .stat-item .label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #d2b48c;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+
+            .teacher-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+
+            <h1 class="page-title">师资团队</h1>
+
+            <div class="intro-section">
+                <h2 class="section-title">师资概况</h2>
+                <p class="intro-text">学校实施"人才强校"战略，打造了一支高学历、双师型、多元化的师资队伍。现有专任教师623人，其中硕士及以上学历占比达93%，拥有省级及以上教学名师6名、省级教学团队2个。教师队伍结构合理，教学经验丰富，为培养高素质应用型人才提供了有力保障。</p>
+            </div>
+
+            <div class="teacher-grid">
+                <div class="teacher-card">
+                    <h3>师资规模</h3>
+                    <p>学校现有专任教师623人，形成了一支规模适中、结构合理的教师队伍。教师队伍中既有经验丰富的老教师，也有充满活力的青年教师，形成了良好的梯队结构。</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="number">623</div>
+                            <div class="label">专任教师</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">93%</div>
+                            <div class="label">硕士及以上学历</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <h3>教学名师</h3>
+                    <p>学校拥有省级及以上教学名师6名，他们在各自的专业领域具有深厚的学术造诣和丰富的教学经验，为学校的教学质量提供了有力支撑。</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="number">6</div>
+                            <div class="label">省级教学名师</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">2</div>
+                            <div class="label">省级教学团队</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <h3>双师型教师</h3>
+                    <p>学校注重培养双师型教师，即既具备扎实的理论功底，又具有丰富的实践经验。教师定期到企业实践，了解行业最新动态，将实践经验融入教学过程。</p>
+                </div>
+
+                <div class="teacher-card">
+                    <h3>教学团队</h3>
+                    <p>学校拥有省级教学团队2个，团队成员在教学方法、课程建设、科研创新等方面取得了显著成果，为提升教学质量发挥了重要作用。</p>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>泰山科技学院 版权所有 © 2026</p>
+                <p>地址：山东省泰安市岱岳区山口镇学院路1号 | 联系电话：0538-8390000</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

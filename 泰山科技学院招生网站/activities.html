@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>完满活动 - 泰山科技学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "宋体", serif;
+        }
+
+        body {
+            background: url("https://picsum.photos/id/1076/1920/1080") no-repeat center center fixed;
+            background-size: cover;
+            background-color: #fdf6e9;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .overlay {
+            background: rgba(255, 250, 240, 0.85);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 42px;
+            color: #8b4513;
+            margin-bottom: 40px;
+            letter-spacing: 5px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #8b4513;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid #d2b48c;
+        }
+
+        .back-btn:hover {
+            background: #a0522d;
+            transform: translateY(-3px);
+        }
+
+        .intro-section {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #8b4513;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 8px;
+            height: 28px;
+            background: #8b4513;
+            display: inline-block;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: #3d2b1f;
+            text-indent: 2em;
+            margin-bottom: 15px;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .activity-card {
+            background: #f9f0e0;
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.2);
+        }
+
+        .activity-card h3 {
+            font-size: 22px;
+            color: #8b4513;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 10px;
+        }
+
+        .activity-card p {
+            font-size: 15px;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .activity-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .activity-card li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .activity-card li::before {
+            content: "•";
+            color: #8b4513;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #d2b48c;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+
+            .activity-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+
+            <h1 class="page-title">完满活动</h1>
+
+            <div class="intro-section">
+                <h2 class="section-title">活动理念</h2>
+                <p class="intro-text">泰山科技学院以"完满活动"理念为核心，通过多元实践培养学生的综合素质、社会责任感和创新精神。学校构建了"四位一体"的完满教育体系，包括社团活动、志愿服务、艺术实践、竞技体育四大板块，为学生提供全方位的成长平台。</p>
+            </div>
+
+            <div class="activity-grid">
+                <div class="activity-card">
+                    <h3>社团活动</h3>
+                    <p>学校拥有100余个学生社团，涵盖学术科技、文化艺术、体育健身、公益服务等多个领域。社团活动丰富多彩，为学生提供了展示才华、发展兴趣、结交朋友的广阔平台。</p>
+                    <ul>
+                        <li>学术科技类社团</li>
+                        <li>文化艺术类社团</li>
+                        <li>体育健身类社团</li>
+                        <li>公益服务类社团</li>
+                    </ul>
+                </div>
+
+                <div class="activity-card">
+                    <h3>志愿服务</h3>
+                    <p>学校积极组织学生参与各类志愿服务活动，培养学生的社会责任感和奉献精神。志愿服务项目包括社区服务、环保行动、支教助学、大型赛会志愿服务等。</p>
+                    <ul>
+                        <li>社区服务项目</li>
+                        <li>环保公益活动</li>
+                        <li>支教助学行动</li>
+                        <li>大型赛会志愿服务</li>
+                    </ul>
+                </div>
+
+                <div class="activity-card">
+                    <h3>艺术实践</h3>
+                    <p>学校重视艺术教育，通过艺术实践活动提升学生的审美素养和艺术修养。每年举办校园文化艺术节、书画展、音乐会、戏剧表演等活动，营造浓厚的校园文化氛围。</p>
+                    <ul>
+                        <li>校园文化艺术节</li>
+                        <li>书画摄影展览</li>
+                        <li>音乐舞蹈表演</li>
+                        <li>戏剧话剧演出</li>
+                    </ul>
+                </div>
+
+                <div class="activity-card">
+                    <h3>竞技体育</h3>
+                    <p>学校积极开展体育竞技活动，培养学生的团队协作精神和拼搏精神。每年举办校运会、篮球赛、足球赛、羽毛球赛等各类体育比赛，学生在竞技中锻炼身体、磨炼意志。</p>
+                    <ul>
+                        <li>田径运动会</li>
+                        <li>球类竞技比赛</li>
+                        <li>健身健美活动</li>
+                        <li>户外拓展训练</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>泰山科技学院 版权所有 © 2026</p>
+                <p>地址：山东省泰安市岱岳区山口镇学院路1号 | 联系电话：0538-8390000</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

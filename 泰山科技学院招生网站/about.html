@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学院介绍 - 泰山科技学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "宋体", serif;
+        }
+
+        body {
+            background: url("https://picsum.photos/id/1076/1920/1080") no-repeat center center fixed;
+            background-size: cover;
+            background-color: #fdf6e9;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .overlay {
+            background: rgba(255, 250, 240, 0.85);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 42px;
+            color: #8b4513;
+            margin-bottom: 40px;
+            letter-spacing: 5px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #8b4513;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid #d2b48c;
+        }
+
+        .back-btn:hover {
+            background: #a0522d;
+            transform: translateY(-3px);
+        }
+
+        .intro-section {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #8b4513;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 8px;
+            height: 28px;
+            background: #8b4513;
+            display: inline-block;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: #3d2b1f;
+            text-indent: 2em;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            background: #f9f0e0;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #d2b48c;
+        }
+
+        .feature-item h4 {
+            font-size: 20px;
+            color: #8b4513;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 15px;
+        }
+
+        .school-motto {
+            text-align: center;
+            font-size: 32px;
+            color: #8b4513;
+            font-weight: bold;
+            margin: 50px 0;
+            letter-spacing: 8px;
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #d2b48c;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+
+            .feature-list {
+                flex-direction: column;
+            }
+
+            .feature-item {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+
+            <h1 class="page-title">学院概况</h1>
+
+            <div class="intro-section">
+                <h2 class="section-title">历史沿革</h2>
+                <p class="intro-text">泰山科技学院创建于2008年，是经教育部批准设立的全日制民办普通本科高校。学校坐落于历史文化名城——山东省泰安市，地处泰山脚下，环境优美，人杰地灵。经过十余年的发展，学校已成长为一所以信息科技为特色，工、管、经、法、文多学科交叉融合的应用型大学。</p>
+                <p class="intro-text">学校始终坚持社会主义办学方向，全面贯彻党的教育方针，落实立德树人根本任务。在办学过程中，学校不断深化教育教学改革，优化学科专业结构，提升办学质量，为社会培养了大批高素质应用型人才。</p>
+            </div>
+
+            <div class="intro-section">
+                <h2 class="section-title">办学理念</h2>
+                <p class="intro-text">学院始终坚守"以学生为中心"的教育理念，坚持"传授知识、培养能力、提升素养"相融合的教育模式。学校注重理论与实践相结合，强调知行合一，致力于培养具有创新精神和实践能力的高素质应用型人才。</p>
+                <p class="intro-text">学校秉承"厚德、博学、求实、创新"的校训精神，以培养德智体美劳全面发展的社会主义建设者和接班人为己任，努力建设特色鲜明、国内知名的高水平应用型大学。</p>
+            </div>
+
+            <div class="school-motto">创业创造，乐学乐教</div>
+
+            <div class="intro-section">
+                <h2 class="section-title">特色优势</h2>
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <h4>师资雄厚</h4>
+                        <p>学校实施"人才强校"战略，现有专任教师623人，其中硕士及以上学历占比达93%，拥有省级及以上教学名师6名、省级教学团队2个。</p>
+                    </li>
+                    <li class="feature-item">
+                        <h4>专业特色</h4>
+                        <p>开设计算机科学与技术、工商管理、教育学等多个特色专业，课程体系兼具传统底蕴与现代科技，注重理论与实践结合。</p>
+                    </li>
+                    <li class="feature-item">
+                        <h4>育人环境</h4>
+                        <p>华东唯一全员书院制大学，拥有十座书院，为学生提供全方位的成长支持，营造良好的育人环境。</p>
+                    </li>
+                    <li class="feature-item">
+                        <h4>成果丰硕</h4>
+                        <p>学生在各类学科竞赛中屡获佳绩，毕业生就业率保持在较高水平，深受用人单位好评。</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="intro-section">
+                <h2 class="section-title">发展愿景</h2>
+                <p class="intro-text">新时代，新征程，泰山科技学院将继续秉承"创业创造，乐学乐教"的校训精神，不断提升综合办学实力与核心竞争力。</p>
+                <p class="intro-text">致力于打造特色鲜明、省内一流的应用型大学，传承文脉，开拓创新，为教育事业发展、国家人才培养贡献更大的力量，让每一位学子在这里筑梦启航，成就精彩人生。</p>
+            </div>
+
+            <div class="footer">
+                <p>泰山科技学院 版权所有 © 2026</p>
+                <p>地址：山东省泰安市岱岳区山口镇学院路1号 | 联系电话：0538-8390000</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

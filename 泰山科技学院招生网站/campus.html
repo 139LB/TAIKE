@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园生活 - 泰山科技学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "宋体", serif;
+        }
+
+        body {
+            background: url("https://picsum.photos/id/1076/1920/1080") no-repeat center center fixed;
+            background-size: cover;
+            background-color: #fdf6e9;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .overlay {
+            background: rgba(255, 250, 240, 0.85);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 42px;
+            color: #8b4513;
+            margin-bottom: 40px;
+            letter-spacing: 5px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #8b4513;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid #d2b48c;
+        }
+
+        .back-btn:hover {
+            background: #a0522d;
+            transform: translateY(-3px);
+        }
+
+        .intro-section {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #8b4513;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 8px;
+            height: 28px;
+            background: #8b4513;
+            display: inline-block;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: #3d2b1f;
+            text-indent: 2em;
+            margin-bottom: 15px;
+        }
+
+        .campus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .campus-card {
+            background: #f9f0e0;
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .campus-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.2);
+        }
+
+        .campus-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .campus-card-content {
+            padding: 25px;
+        }
+
+        .campus-card h3 {
+            font-size: 22px;
+            color: #8b4513;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 10px;
+        }
+
+        .campus-card p {
+            font-size: 15px;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #d2b48c;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+
+            .campus-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+
+            <h1 class="page-title">校园生活</h1>
+
+            <div class="intro-section">
+                <h2 class="section-title">生活概况</h2>
+                <p class="intro-text">泰山科技学院为学生提供丰富多彩的校园生活，拥有完善的学习设施、舒适的生活环境和多元化的活动平台。学校注重学生的全面发展，通过各类活动和设施，为学生创造良好的成长环境，让每一位学生都能在这里找到属于自己的精彩。</p>
+            </div>
+
+            <div class="campus-grid">
+                <div class="campus-card">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20students%20participating%20in%20campus%20activity&image_size=square" alt="校园活动">
+                    <div class="campus-card-content">
+                        <h3>丰富多彩的校园活动</h3>
+                        <p>学校每年举办各类校园活动，包括文化节、体育节、科技节、艺术展等。学生社团种类繁多，涵盖学术、文艺、体育、公益等多个领域，为学生提供展示才华、锻炼能力的平台。</p>
+                    </div>
+                </div>
+
+                <div class="campus-card">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20university%20library%20with%20students%20studying&image_size=square" alt="图书馆">
+                    <div class="campus-card-content">
+                        <h3>现代化的学习设施</h3>
+                        <p>学校拥有现代化的图书馆、实验室、多媒体教室等学习设施。图书馆藏书丰富，环境舒适，提供安静的学习空间。实验室设备先进，满足各专业的教学科研需求。</p>
+                    </div>
+                </div>
+
+                <div class="campus-card">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20dormitory%20room%20with%20modern%20facilities&image_size=square" alt="学生宿舍">
+                    <div class="campus-card-content">
+                        <h3>舒适的生活环境</h3>
+                        <p>学校提供舒适的学生宿舍，配备空调、热水、网络等设施。宿舍管理规范，安全有保障。食堂提供多样化的餐饮选择，满足不同学生的口味需求。</p>
+                    </div>
+                </div>
+
+                <div class="campus-card">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20sports%20field%20with%20students%20exercising&image_size=square" alt="体育设施">
+                    <div class="campus-card-content">
+                        <h3>完善的体育设施</h3>
+                        <p>学校拥有标准的体育场、篮球场、网球场、健身房等体育设施。定期举办各类体育比赛和健身活动，鼓励学生积极参与体育锻炼，增强身体素质。</p>
+                    </div>
+                </div>
+
+                <div class="campus-card">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20student%20center%20with%20modern%20facilities&image_size=square" alt="学生中心">
+                    <div class="campus-card-content">
+                        <h3>便捷的学生服务</h3>
+                        <p>学生中心提供一站式服务，包括学籍管理、就业指导、心理咨询等。学校设有医务室、超市、银行等生活服务设施，满足学生的日常需求。</p>
+                    </div>
+                </div>
+
+                <div class="campus-card">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20beautiful%20campus%20scenery&image_size=square" alt="校园环境">
+                    <div class="campus-card-content">
+                        <h3>优美的校园环境</h3>
+                        <p>学校坐落于泰山脚下，环境优美，绿树成荫。校园建筑风格现代与古典相结合，营造了浓厚的学习氛围和人文气息。是学习生活的理想之地。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>泰山科技学院 版权所有 © 2026</p>
+                <p>地址：山东省泰安市岱岳区山口镇学院路1号 | 联系电话：0538-8390000</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

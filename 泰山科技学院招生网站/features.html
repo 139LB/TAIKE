@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特色定位 - 泰山科技学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "宋体", serif;
+        }
+
+        body {
+            background: url("https://picsum.photos/id/1076/1920/1080") no-repeat center center fixed;
+            background-size: cover;
+            background-color: #fdf6e9;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .overlay {
+            background: rgba(255, 250, 240, 0.85);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 42px;
+            color: #8b4513;
+            margin-bottom: 40px;
+            letter-spacing: 5px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #8b4513;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid #d2b48c;
+        }
+
+        .back-btn:hover {
+            background: #a0522d;
+            transform: translateY(-3px);
+        }
+
+        .intro-section {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #8b4513;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 8px;
+            height: 28px;
+            background: #8b4513;
+            display: inline-block;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: #3d2b1f;
+            text-indent: 2em;
+            margin-bottom: 15px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: #f9f0e0;
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            color: #8b4513;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .feature-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .feature-card li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .feature-card li::before {
+            content: "•";
+            color: #8b4513;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .feature-highlight {
+            background: rgba(139, 69, 19, 0.1);
+            border-left: 4px solid #8b4513;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .feature-highlight h4 {
+            color: #8b4513;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #d2b48c;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+
+            <h1 class="page-title">特色定位</h1>
+
+            <div class="intro-section">
+                <h2 class="section-title">办学特色</h2>
+                <p class="intro-text">泰山科技学院以信息科技为特色，以应用型人才培养为目标，打造"四位一体双院制"特色育人模式。学校坚持"以学生为中心"的教育理念，注重培养学生的创新精神、实践能力和综合素质，致力于培养适应经济社会发展需要的高素质应用型人才。</p>
+                
+                <div class="feature-highlight">
+                    <h4>四位一体双院制</h4>
+                    <p>"四位一体"指完满教育、通识教育、商科教育、专业教育四位一体；"双院制"指学院+书院协同育人模式。这一特色育人模式是学校办学的核心优势。</p>
+                </div>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>信息科技特色</h3>
+                    <p>学校以信息科技为特色优势，开设计算机科学与技术、电子信息工程、数据科学与大数据技术等专业，紧跟信息技术发展前沿，培养信息技术领域的应用型人才。</p>
+                    <ul>
+                        <li>计算机科学与技术</li>
+                        <li>电子信息工程</li>
+                        <li>数据科学与大数据技术</li>
+                        <li>人工智能技术应用</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>应用型人才培养</h3>
+                    <p>学校坚持以应用型人才培养为目标，注重理论与实践相结合，强化实践教学环节，培养学生的实践能力和创新精神。</p>
+                    <ul>
+                        <li>项目化教学改革</li>
+                        <li>实践教学体系完善</li>
+                        <li>产教深度融合</li>
+                        <li>双师型队伍建设</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>完满教育</h3>
+                    <p>完满教育是学校特色育人模式的重要组成部分，通过社团活动、志愿服务、艺术实践、竞技体育四大板块，全面培养学生的综合素质。</p>
+                    <ul>
+                        <li>社团活动丰富多彩</li>
+                        <li>志愿服务常态化</li>
+                        <li>艺术实践多样化</li>
+                        <li>竞技体育普及化</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>通识教育</h3>
+                    <p>学校重视通识教育，开设人文社科、自然科学、艺术审美等多领域通识课程，拓宽学生知识面，提升学生人文素养和科学素养。</p>
+                    <ul>
+                        <li>人文社科课程</li>
+                        <li>自然科学课程</li>
+                        <li>艺术审美课程</li>
+                        <li>跨学科选修课程</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>商科教育</h3>
+                    <p>学校注重商科教育，培养学生的商业思维和管理能力。通过商科课程学习和商业实践活动，提升学生的创业意识和创新能力。</p>
+                    <ul>
+                        <li>商业思维培养</li>
+                        <li>管理能力提升</li>
+                        <li>创业意识激发</li>
+                        <li>创新实践平台</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>书院制育人</h3>
+                    <p>学校实行全员书院制，十座书院各具特色，为学生提供多元化的成长路径。书院制打破了专业界限，促进了不同专业学生的交流融合。</p>
+                    <ul>
+                        <li>十座特色书院</li>
+                        <li>导师制指导</li>
+                        <li>社区化生活</li>
+                        <li>跨专业交流</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>泰山科技学院 版权所有 © 2026</p>
+                <p>地址：山东省泰安市岱岳区山口镇学院路1号 | 联系电话：0538-8390000</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

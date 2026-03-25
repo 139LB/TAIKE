@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泰山科技学院 招生宣传</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "SimHei", serif;
+        }
+
+        /* 古风背景 */
+        body {
+            background: url("https://picsum.photos/id/1076/1920/1080") no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            position: relative;
+        }
+
+        /* 遮罩层 - 增加古风氛围感 */
+        .overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8B4513;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8B4513;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* 英雄区 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-in-out 0.2s both;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #8B4513;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease-in-out 0.4s both;
+        }
+
+        .btn:hover {
+            background: #5a2d0c;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(139, 69, 19, 0.3);
+        }
+
+        /* 学校简介 */
+        .about {
+            padding: 6rem 0;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .about h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #8B4513;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* 卡片容器 - 采用古风布局 */
+        .cards-container {
+            padding: 6rem 0;
+            background-color: rgba(249, 249, 249, 0.9);
+        }
+
+        .cards-container h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #8B4513;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        /* 古风卡片样式 */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.15);
+        }
+
+        /* 卡片标题 */
+        .card h3 {
+            color: #8B4513; /* 深褐色 */
+            border-bottom: 2px solid #D2B48C; /* 浅棕色边框 */
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* 卡片内容 */
+        .card p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* 校园生活 */
+        .campus {
+            padding: 6rem 0;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .campus h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #8B4513;
+        }
+
+        .campus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .campus-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .campus-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .campus-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .campus-card h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem;
+            color: #8B4513;
+        }
+
+        .campus-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+            margin: 0 1.5rem 1.5rem;
+        }
+
+        /* 联系方式 */
+        .contact {
+            padding: 6rem 0;
+            background-color: rgba(249, 249, 249, 0.9);
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #8B4513;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #8B4513;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form button {
+            background-color: #8B4513;
+            color: #fff;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #5a2d0c;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        /* 底部信息栏 */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            border-top: 2px solid #D2B48C;
+        }
+
+        /* 动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: rgba(255, 255, 255, 0.95);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem;
+                box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s;
+                pointer-events: none;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            .about-content,
+            .contact-content {
+                flex-direction: column;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .about h2,
+            .cards-container h2,
+            .campus h2,
+            .contact h2 {
+                font-size: 2rem;
+            }
+
+            .card,
+            .campus-card {
+                padding: 1.5rem;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">泰山科技学院</div>
+        <ul class="nav-links">
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">学院概览</a></li>
+            <li><a href="#majors">专业设置</a></li>
+            <li><a href="#campus">校园生活</a></li>
+            <li><a href="#contact">联系方式</a></li>
+        </ul>
+        <button class="nav-toggle">☰</button>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>泰山科技学院</h1>
+            <p>校训精神：创业创造，乐学乐教</p>
+            <a href="about.html" class="btn">了解学院</a>
+        </div>
+    </section>
+
+    <!-- 学院概览 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>学院概览</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>泰山科技学院，是经教育部批准设立的全日制民办普通本科高校，是一所以信息科技为特色，工、管、经、法、文多学科交叉融合的应用型大学。</p>
+                    <p>学校实施“人才强校”战略，打造了一支高学历、双师型、多元化的师资队伍。现有专任教师623人，其中硕士及以上学历占比达93%，拥有省级及以上教学名师6名、省级教学团队2个。</p>
+                    <p>华东唯一全员书院制大学，泰科这里，有十座书院，也对应了十种成长方式，没有标准答案，只有适合你的道路。</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20university%20campus%20with%20beautiful%20buildings%20and%20green%20lawns&image_size=landscape_16_9" alt="校园环境">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专业设置和其他卡片 -->
+    <section id="majors" class="cards-container">
+        <div class="container">
+            <h2>核心特色</h2>
+            <div class="cards-grid">
+                <!-- 卡片1: 专业设置 -->
+                <div class="card">
+                    <h3>专业设置</h3>
+                    <p>
+                        学院开设计算机科学与技术、工商管理、教育学等多个特色专业。
+                        课程体系兼具传统底蕴与现代科技，注重理论与实践结合，为学生搭建多元化成长平台。
+                    </p>
+                    <a href="majors.html" class="btn">查看专业 →</a>
+                </div>
+
+                <!-- 卡片2: 师资力量 -->
+                <div class="card">
+                    <h3>师资团队</h3>
+                    <p>
+                       学校实施"人才强校"战略，打造了一支高学历、双师型、多元化的师资队伍。现有专任教师623人，其中硕士及以上学历占比达93%，拥有省级及以上教学名师6名、省级教学团队2个。
+                    </p>
+                    <a href="teachers.html" class="btn">名师风采 →</a>
+                </div>
+
+                <!-- 卡片3: 学生活动 -->
+                <div class="card">
+                    <h3>完满活动</h3>
+                    <p>
+                        为促进学生全面发展，我校以"完满活动"理念为核心，通过多元实践培养学生的综合素质、社会责任感和创新精神。
+                    </p>
+                    <a href="activities.html" class="btn">活动集锦 →</a>
+                </div>
+
+                <!-- 卡片4: 双院体系 -->
+                <div class="card">
+                    <h3>双院体系</h3>
+                    <p>
+                        华东唯一全员书院制大学，泰科这里，有十座书院，也对应了十种成长方式，没有标准答案，只有适合你的道路。
+                    </p>
+                    <a href="colleges.html" class="btn">十大书院 →</a>
+                </div>
+
+                <!-- 卡片5: 发展前景 -->
+                <div class="card">
+                    <h3>发展前景</h3>
+                    <p>
+                        学校与500余家企业建立深度合作关系，毕业生就业率连续多年保持在95%以上。学校注重产教融合，为学生提供广阔的就业和升学发展空间。
+                    </p>
+                    <a href="development.html" class="btn">了解更多 →</a>
+                </div>
+
+                <!-- 卡片6: 特色定位 -->
+                <div class="card">
+                    <h3>特色定位</h3>
+                    <p>
+                        以信息科技为特色，以应用型人才培养为目标，打造"四位一体双院制"特色育人模式，培养具有创新精神的高素质应用型人才。
+                    </p>
+                    <a href="features.html" class="btn">探索特色 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 校园生活 -->
+    <section id="campus" class="campus">
+        <div class="container">
+            <h2>校园生活</h2>
+            <div class="campus-grid">
+                <div class="campus-card">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20students%20participating%20in%20campus%20activity&image_size=square" alt="校园活动">
+                    <h3>丰富多彩的校园活动</h3>
+                    <p>学校每年举办各类校园活动，包括文化节、体育节、科技节等，为学生提供展示才华的平台。</p>
+                </div>
+                <div class="campus-card">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20university%20library%20with%20students%20studying&image_size=square" alt="图书馆">
+                    <h3>现代化的学习设施</h3>
+                    <p>学校拥有现代化的图书馆、实验室、多媒体教室等学习设施，为学生提供良好的学习环境。</p>
+                </div>
+                <div class="campus-card">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20dormitory%20room%20with%20modern%20facilities&image_size=square" alt="学生宿舍">
+                    <h3>舒适的生活环境</h3>
+                    <p>学校提供舒适的学生宿舍，配备空调、热水、网络等设施，为学生提供良好的生活环境。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>联系方式</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><strong>学校地址：</strong>山东省泰安市岱岳区山口镇学院路1号</p>
+                    <p><strong>招生热线：</strong>0538-8390000</p>
+                    <p><strong>招生邮箱：</strong>admission@tskjxy.edu.cn</p>
+                    <p><strong>官网：</strong><a href="#">www.tskjxy.edu.cn</a></p>
+                </div>
+                <div class="contact-form">
+                    <h3>在线咨询</h3>
+                    <form>
+                        <input type="text" placeholder="姓名" required>
+                        <input type="tel" placeholder="电话" required>
+                        <input type="email" placeholder="邮箱" required>
+                        <textarea placeholder="咨询内容" required></textarea>
+                        <button type="submit" class="btn">提交</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部区域 -->
+    <footer class="footer">
+        <div class="container">
+            <p>山东省泰安市岱岳区山口镇学院路1号 | 招生热线：0538-8390000 | 官方邮箱：admission@tskjxy.edu.cn</p>
+            <p style="margin-top: 10px;">© 2026 泰山科技学院 版权所有</p>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏响应式功能
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // 平滑滚动
+        const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+
+        smoothScrollLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动导航菜单
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // 滚动时导航栏样式变化
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // 表单提交处理
+        const contactForm = document.querySelector('.contact-form form');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // 模拟表单提交
+                alert('感谢您的咨询！我们会尽快与您联系。');
+                contactForm.reset();
+            });
+        }
+
+        // 滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 1s ease-in-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        // 观察需要动画的元素
+        const animateElements = document.querySelectorAll('.about-content, .card, .campus-card, .contact-content');
+        animateElements.forEach(element => {
+            element.style.opacity = '0';
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>

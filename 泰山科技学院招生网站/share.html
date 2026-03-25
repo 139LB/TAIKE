@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泰山科技学院招生宣传网站分享</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "宋体", serif;
+        }
+
+        body {
+            background: url("https://picsum.photos/id/1076/1920/1080") no-repeat center center fixed;
+            background-size: cover;
+            background-color: #fdf6e9;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .overlay {
+            background: rgba(255, 250, 240, 0.9);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #8b4513;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 15px;
+        }
+
+        .share-section {
+            margin-bottom: 30px;
+        }
+
+        .share-section h2 {
+            font-size: 24px;
+            color: #8b4513;
+            margin-bottom: 15px;
+        }
+
+        .share-link {
+            background: #f9f0e0;
+            border: 1px solid #d2b48c;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: monospace;
+            word-break: break-all;
+        }
+
+        .steps {
+            background: #f9f0e0;
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .steps h3 {
+            color: #8b4513;
+            margin-bottom: 15px;
+        }
+
+        .steps ol {
+            margin-left: 20px;
+        }
+
+        .steps li {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #8b4513;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #a0522d;
+            transform: translateY(-3px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #d2b48c;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .share-section h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>泰山科技学院招生宣传网站分享</h1>
+
+            <div class="share-section">
+                <h2>本地访问链接</h2>
+                <div class="share-link">http://localhost:8000</div>
+                <p>这是在您本地电脑上访问网站的链接。</p>
+            </div>
+
+            <div class="share-section">
+                <h2>同一网络访问</h2>
+                <p>如果其他人与您在同一个WiFi网络下，可以通过以下方式访问：</p>
+                <div class="steps">
+                    <h3>访问步骤：</h3>
+                    <ol>
+                        <li>在您的电脑上打开命令提示符（CMD）</li>
+                        <li>输入 <code>ipconfig</code> 并按回车</li>
+                        <li>找到 "IPv4 地址"，例如：192.168.1.100</li>
+                        <li>将这个IP地址分享给同一网络下的其他人</li>
+                        <li>他们可以在浏览器中输入：http://您的IP地址:8000 来访问网站</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="share-section">
+                <h2>公网访问（可选）</h2>
+                <p>如果需要让不在同一网络的人访问，可以使用内网穿透工具，如：</p>
+                <ul>
+                    <li>ngrok</li>
+                    <li>frp</li>
+                    <li>花生壳</li>
+                </ul>
+                <p>这些工具可以将您的本地服务器映射到公网，生成一个可在任何地方访问的链接。</p>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index.html" class="btn">访问网站</a>
+            </div>
+
+            <div class="footer">
+                <p>泰山科技学院 版权所有 © 2026</p>
+                <p>服务器运行中，请勿关闭命令窗口</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

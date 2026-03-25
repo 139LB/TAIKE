@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专业设置 - 泰山科技学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "宋体", serif;
+        }
+
+        body {
+            background: url("https://picsum.photos/id/1076/1920/1080") no-repeat center center fixed;
+            background-size: cover;
+            background-color: #fdf6e9;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .overlay {
+            background: rgba(255, 250, 240, 0.85);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 42px;
+            color: #8b4513;
+            margin-bottom: 40px;
+            letter-spacing: 5px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #8b4513;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid #d2b48c;
+        }
+
+        .back-btn:hover {
+            background: #a0522d;
+            transform: translateY(-3px);
+        }
+
+        .intro-section {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #8b4513;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 8px;
+            height: 28px;
+            background: #8b4513;
+            display: inline-block;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: #3d2b1f;
+            text-indent: 2em;
+            margin-bottom: 15px;
+        }
+
+        .major-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .major-card {
+            background: #f9f0e0;
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .major-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.2);
+        }
+
+        .major-card h3 {
+            font-size: 22px;
+            color: #8b4513;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 10px;
+        }
+
+        .major-card p {
+            font-size: 15px;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .major-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .major-card li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .major-card li::before {
+            content: "•";
+            color: #8b4513;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #d2b48c;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+
+            .major-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+
+            <h1 class="page-title">专业设置</h1>
+
+            <div class="intro-section">
+                <h2 class="section-title">专业概况</h2>
+                <p class="intro-text">泰山科技学院以信息科技为特色，开设工、管、经、法、文等多学科专业。学校注重学科交叉融合，构建了以工科为主，多学科协调发展的专业体系。课程设置紧密结合行业需求，注重理论与实践相结合，为学生提供多元化的学习平台和发展空间。</p>
+            </div>
+
+            <div class="major-grid">
+                <div class="major-card">
+                    <h3>计算机科学与技术</h3>
+                    <p>培养具有扎实的计算机理论基础和实践能力的专业人才，掌握软件开发、网络工程、人工智能等核心技术。</p>
+                    <ul>
+                        <li>软件开发方向</li>
+                        <li>网络工程方向</li>
+                        <li>人工智能方向</li>
+                    </ul>
+                </div>
+
+                <div class="major-card">
+                    <h3>工商管理</h3>
+                    <p>培养具有现代管理理念和实践能力的管理人才，掌握企业管理、市场营销、人力资源等专业知识。</p>
+                    <ul>
+                        <li>企业管理方向</li>
+                        <li>市场营销方向</li>
+                        <li>人力资源管理方向</li>
+                    </ul>
+                </div>
+
+                <div class="major-card">
+                    <h3>教育学</h3>
+                    <p>培养具有教育理论知识和教学实践能力的教育工作者，掌握教育教学方法和教育管理技能。</p>
+                    <ul>
+                        <li>基础教育方向</li>
+                        <li>教育管理方向</li>
+                        <li>学前教育方向</li>
+                    </ul>
+                </div>
+
+                <div class="major-card">
+                    <h3>电子信息工程</h3>
+                    <p>培养具有电子技术和信息处理能力的专业人才，掌握通信技术、信号处理等核心技术。</p>
+                    <ul>
+                        <li>通信工程方向</li>
+                        <li>信号处理方向</li>
+                        <li>嵌入式系统方向</li>
+                    </ul>
+                </div>
+
+                <div class="major-card">
+                    <h3>机械设计制造及其自动化</h3>
+                    <p>培养具有机械设计和制造能力的专业人才，掌握机械设计、自动化控制等核心技术。</p>
+                    <ul>
+                        <li>机械设计方向</li>
+                        <li>自动化控制方向</li>
+                        <li>智能制造方向</li>
+                    </ul>
+                </div>
+
+                <div class="major-card">
+                    <h3>会计学</h3>
+                    <p>培养具有会计专业知识和实践能力的专业人才，掌握财务会计、审计、税务等专业知识。</p>
+                    <ul>
+                        <li>财务会计方向</li>
+                        <li>审计方向</li>
+                        <li>税务方向</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>泰山科技学院 版权所有 © 2026</p>
+                <p>地址：山东省泰安市岱岳区山口镇学院路1号 | 联系电话：0538-8390000</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

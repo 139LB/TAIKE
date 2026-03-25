@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发展前景 - 泰山科技学院</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "宋体", serif;
+        }
+
+        body {
+            background: url("https://picsum.photos/id/1076/1920/1080") no-repeat center center fixed;
+            background-size: cover;
+            background-color: #fdf6e9;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .overlay {
+            background: rgba(255, 250, 240, 0.85);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 42px;
+            color: #8b4513;
+            margin-bottom: 40px;
+            letter-spacing: 5px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #8b4513;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid #d2b48c;
+        }
+
+        .back-btn:hover {
+            background: #a0522d;
+            transform: translateY(-3px);
+        }
+
+        .intro-section {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #8b4513;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 8px;
+            height: 28px;
+            background: #8b4513;
+            display: inline-block;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: #3d2b1f;
+            text-indent: 2em;
+            margin-bottom: 15px;
+        }
+
+        .development-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .development-card {
+            background: #f9f0e0;
+            border: 1px solid #d2b48c;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .development-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.2);
+        }
+
+        .development-card h3 {
+            font-size: 22px;
+            color: #8b4513;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 10px;
+        }
+
+        .development-card p {
+            font-size: 15px;
+            color: #3d2b1f;
+            line-height: 1.8;
+        }
+
+        .development-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .development-card li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .development-card li::before {
+            content: "•";
+            color: #8b4513;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            background: rgba(139, 69, 19, 0.1);
+            border-radius: 10px;
+            min-width: 150px;
+        }
+
+        .stat-box .number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .stat-box .label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #d2b48c;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 32px;
+            }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+
+            .development-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <a href="index.html" class="back-btn">← 返回首页</a>
+
+            <h1 class="page-title">发展前景</h1>
+
+            <div class="intro-section">
+                <h2 class="section-title">就业与升学</h2>
+                <p class="intro-text">泰山科技学院高度重视学生就业工作，与500余家企业建立深度合作关系，构建完善的就业服务体系。毕业生就业率连续多年保持在95%以上，就业质量稳步提升。同时，学校为有升学意愿的学生提供全方位的考研指导服务，助力学生实现更高层次的学业追求。</p>
+                
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <div class="number">95%+</div>
+                        <div class="label">毕业生就业率</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">500+</div>
+                        <div class="label">合作企业</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">85%+</div>
+                        <div class="label">专业对口率</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="development-grid">
+                <div class="development-card">
+                    <h3>校企合作</h3>
+                    <p>学校与众多知名企业建立深度合作关系，开展订单式培养、实习实训、就业推荐等多种形式的合作，为学生提供丰富的实践机会和就业渠道。</p>
+                    <ul>
+                        <li>订单式人才培养</li>
+                        <li>企业实习实训基地</li>
+                        <li>校企联合实验室</li>
+                        <li>就业推荐服务</li>
+                    </ul>
+                </div>
+
+                <div class="development-card">
+                    <h3>产教融合</h3>
+                    <p>学校积极推进产教融合，将产业需求融入人才培养全过程。通过共建产业学院、开展项目化教学等方式，培养符合产业需求的高素质应用型人才。</p>
+                    <ul>
+                        <li>产业学院建设</li>
+                        <li>项目化教学改革</li>
+                        <li>双师型队伍建设</li>
+                        <li>真实项目实践</li>
+                    </ul>
+                </div>
+
+                <div class="development-card">
+                    <h3>升学深造</h3>
+                    <p>学校为有升学意愿的学生提供全方位的考研指导服务，包括考研规划、课程辅导、心理辅导等，帮助学生实现更高层次的学业追求。</p>
+                    <ul>
+                        <li>考研规划指导</li>
+                        <li>专业课程辅导</li>
+                        <li>心理辅导服务</li>
+                        <li>报考院校咨询</li>
+                    </ul>
+                </div>
+
+                <div class="development-card">
+                    <h3>创新创业</h3>
+                    <p>学校设有大学生创业孵化基地，为有创业梦想的学生提供场地、资金、指导等全方位支持，助力学生实现创业梦想。</p>
+                    <ul>
+                        <li>创业孵化基地</li>
+                        <li>创业资金支持</li>
+                        <li>创业导师指导</li>
+                        <li>创业项目路演</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>泰山科技学院 版权所有 © 2026</p>
+                <p>地址：山东省泰安市岱岳区山口镇学院路1号 | 联系电话：0538-8390000</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
